@@ -41,6 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractCourse.cs" />
+    <Compile Include="AbstractCriteria.cs" />
+    <Compile Include="AbstractReview.cs" />
+    <Compile Include="AppReview.cs" />
+    <Compile Include="AppReviews.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="Courses.cs" />
+    <Compile Include="Criteria.cs" />
+    <Compile Include="Criterion.cs" />
     <Compile Include="GradApplication.cs" />
     <Compile Include="Concentration.cs" />
     <Compile Include="Degree.cs" />
