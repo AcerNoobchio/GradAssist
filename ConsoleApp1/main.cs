@@ -11,7 +11,6 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
-
         }//end Main
     }//end main
 }
