@@ -26,7 +26,7 @@ namespace Shared
         /// <summary>
         /// returns a string of user specific data
         /// </summary>
-        public string ToString()
+        public override string ToString()
         {
             return string.Format(
                 "User ID:".PadRight(20) + "{0}\n"+
