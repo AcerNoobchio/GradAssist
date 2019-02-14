@@ -38,5 +38,15 @@ namespace Shared
         /// <param name="position"> The 0-based position from which to remove a Review </param>
         public abstract void RemoveAt(int position);
 
+        public Student GetSubject()
+        {
+            return this.Subject;
+        }//end GetSubject()
+
+        public DateTime GetReviewDate()
+        {
+                return this.ReviewDate;
+        }//end GetReviewDate()
+
     }//end AbstractReview
 }

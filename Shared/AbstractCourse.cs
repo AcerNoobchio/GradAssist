@@ -73,5 +73,20 @@ namespace Shared
         public abstract void RemoveAt(int position);
         #endregion
 
+        public String GetId()
+        {
+            return this.Id;
+        }//end GetId()
+
+        public String GetName()
+        {
+            return this.Name;
+        }//end GetName()
+
+        public bool GetStatus()
+        {
+            return this.status;
+        }//end GetStatus()
+
     }//end Abstract Course
 }
