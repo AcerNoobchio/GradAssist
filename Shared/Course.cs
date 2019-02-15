@@ -9,7 +9,7 @@ namespace Shared
     /// <summary>
     /// The leaf of the course tree
     /// </summary>
-    class Course : AbstractCourse
+    public class Course : AbstractCourse
     {
 
         public Course(String Id, String Name, bool status) : base(Id, Name, status)

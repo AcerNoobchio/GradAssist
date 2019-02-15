@@ -9,7 +9,7 @@ namespace Shared
     /// <summary>
     /// The composite of courses in the course tree
     /// </summary>
-    class Courses : AbstractCourse
+    public class Courses : AbstractCourse
     {
         List<AbstractCourse> CourseList = new List<AbstractCourse>();
 

@@ -9,7 +9,7 @@ namespace Shared
     /// <summary>
     /// Leaf node for the Review Tree
     /// </summary>
-    class AppReview : AbstractReview
+    public class AppReview : AbstractReview
     {
         /// <summary>
         /// The parameterized constructor that takes a student and datetime object, calls the parent class constructor

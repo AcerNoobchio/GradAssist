@@ -9,7 +9,7 @@ namespace Shared
     /// <summary>
     /// The collection of reviews
     /// </summary>
-    class AppReviews : AbstractReview
+    public class AppReviews : AbstractReview
     {
         List<AbstractReview> ReviewList = new List<AbstractReview>();
 

@@ -9,7 +9,7 @@ namespace Shared
     /// <summary>
     /// The composite of the criteria tree
     /// </summary>
-    class Criteria : AbstractCriteria
+    public class Criteria : AbstractCriteria
     {
         List<AbstractCriteria> CriteriaList;
 

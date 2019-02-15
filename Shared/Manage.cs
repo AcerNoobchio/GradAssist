@@ -12,14 +12,14 @@ namespace Shared
     public class Manage
     {
         public User currentUser { get; set; }
-        //public AppReviews appReviews { get; set; }// add this back in when AppReviews is complete
-        //public Courses courses { get; set; }// add this back in when Courses is complete
-        //public Criteria criteria { get; set; }// add this back in when Criteria is complete
+        public AppReviews appReviews { get; set; }// add this back in when AppReviews is complete
+        public Courses courses { get; set; }// add this back in when Courses is complete
+        public Criteria criteria { get; set; }// add this back in when Criteria is complete
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public User() { }
+        public Manage() { }
 
          /// <summary>
         /// returns a string of user specific data
