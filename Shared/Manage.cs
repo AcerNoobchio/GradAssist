@@ -11,6 +11,6 @@ namespace Shared
     /// </summary>
     public class Manage
     {
-
+        
     }//end Manage
 }
