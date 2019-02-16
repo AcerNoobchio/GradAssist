@@ -12,16 +12,17 @@ namespace Shared
     public class Student
     {
 		//variables
-		public string E_Num { get; }
-		public string F_Name { get; }
-		public string M_Name { get; }
-		public string L_Name { get; }
-		public int Hours { get; }
-		public string Email { get; }
-		public int Address_ID { get; }
+		private string E_Num { get; }
+		private string F_Name { get; }
+		private string M_Name { get; }
+		private string L_Name { get; }
+		private int Hours { get; }
+		private string Email { get; }
+		private int Address_ID { get; }
+        private Concentration StudentConcentration;
 
 		//instance constructor 
-		public Student(string e_Num, string f_Name, string m_Name, string l_Name, int hours, string email, int address_ID)
+		public Student(string e_Num, string f_Name, string m_Name, string l_Name, int hours, string email, int address_ID, Concentration ConcentrationIn)
 		{
 			E_Num = e_Num;
 			F_Name = f_Name;
@@ -30,6 +31,7 @@ namespace Shared
 			Hours = hours;
 			Email = email;
 			Address_ID = address_ID;
+            this.StudentConcentration = ConcentrationIn;
 		}
 
 		//copy constructor 
@@ -42,7 +44,8 @@ namespace Shared
 			Hours = stud.Hours;
 			Email = stud.Email;
 			Address_ID = stud.Address_ID;
-		}
+            this.StudentConcentration = new Concentration(stud.StudentConcentration);
+		}//end Student(Student)
 
 	}//end student
 }

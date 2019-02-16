@@ -21,7 +21,43 @@ namespace Shared
         /// <summary>
         /// Default constructor
         /// </summary>
-        public User() { }
+        public User()
+        {
+            
+        }//end User()
+
+        /// <summary>
+        /// Parameterized constructor
+        /// </summary>
+        /// <param name="idIn"></param>
+        /// <param name="emailIn"></param>
+        /// <param name="passwordIn"></param>
+        /// <param name="TypeIn"></param>
+        public User(int idIn, string emailIn, string passwordIn, UserType TypeIn)
+        {
+            this.id = idIn;
+            this.email = emailIn;
+            this.password = passwordIn;
+            this.type = TypeIn;
+        }//end User(int, string, string, UserType)
+
+        public User(string emailIn, string passwordIn)
+        {
+            this.email = emailIn;
+            this.password = passwordIn;
+        }
+
+        /// <summary>
+        /// Copy Constructor
+        /// </summary>
+        /// <param name="UserIn"></param>
+        public User(User UserIn)
+        {
+            this.id = UserIn.id;
+            this.email = UserIn.email;
+            this.password = UserIn.password;
+            this.type = UserIn.type;
+        }//end User(User)
 
         /// <summary>
         /// returns a string of user specific data
@@ -37,7 +73,7 @@ namespace Shared
                 email,
                 type,
                 status);
-        }
+        }//end ToString()
 
 
     }

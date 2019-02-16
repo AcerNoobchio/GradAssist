@@ -32,23 +32,6 @@ namespace Shared
         {
             throw new InvalidOperationException();
         }//end RemoveAt(int)
-        #endregion
-
-        #region Setters and Getters
-        public String GetId()
-        {
-            return base.Id;
-        }//end GetId()
-
-        public String GetName()
-        {
-            return base.Name;
-        }//end GetName()
-
-        public bool GetStatus()
-        {
-            return base.status;
-        }//end GetStatus()
 
         #endregion
     }//end Course
