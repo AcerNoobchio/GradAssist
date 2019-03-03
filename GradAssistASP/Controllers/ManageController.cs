@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using GradAssistASP.Models;
+using Shared;
 
 namespace GradAssistASP.Controllers
 {
@@ -18,6 +19,7 @@ namespace GradAssistASP.Controllers
 
         public ManageController()
         {
+            
         }
 
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)

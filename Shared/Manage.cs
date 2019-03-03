@@ -14,8 +14,10 @@ namespace Shared
         public User currentUser { get; set; }
         private List<User> AllUsers;
         public AppReviews appReviews { get; set; }// add this back in when AppReviews is complete
-        public Courses courses { get; set; }// add this back in when Courses is complete
+        public Courses SelectedCourses { get; set; }// add this back in when Courses is complete
         public Criteria criteria { get; set; }// add this back in when Criteria is complete
+        private const int Number = 106;
+        public Course SelectedCourse;
 
         /// <summary>
         /// Default constructor, should populate from the database
@@ -23,6 +25,11 @@ namespace Shared
         public Manage()
         {
             AllUsers = new List<User>();
+        }
+
+        public int GetNumber()
+        {
+            return Number;
         }
 
         public int LogIn(User UserIn)
@@ -76,7 +83,35 @@ namespace Shared
             return iStatus;
         }//end CreateAccount(User)
 
+        public int CreateCourse(AbstractCourse CourseIn)
+        {
+            int iStatus = 0;    //0 indicates nothing happened
+            Course NewCourse;
 
+            if(!(CourseIn is Courses))  //Make sure you're not passing a course list here
+            {
+                NewCourse = new Course((Course)CourseIn);
+                                                            //Save the new course to the database?
+            }
+            else
+            {
+                iStatus = -1;           //Indicates a course was passed
+            }
+
+            return iStatus;
+        }//end CreateCourse(AbstractCourse)
+
+        /// <summary>
+        /// Search the database based on the passed name
+        /// </summary>
+        /// <param name="NameIn"></param>
+        /// <returns></returns>
+        public int LoadCourse(String NameIn)
+        {
+            int iStatus = 0;
+
+            return iStatus;
+        }//end LoadCourse(String)
 
          /// <summary>
         /// returns a string of user specific data

@@ -17,6 +17,11 @@ namespace Shared
 
         }//end Course(String, String, bool) : Base (String, String, bool)
 
+        public Course(Course CourseIn) : base(CourseIn)
+        {
+
+        }//end Course(String, String, bool) : Base (String, String, bool)
+
         #region Necessary Overrides
         public override void Add(AbstractCourse course)
         {

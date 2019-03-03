@@ -9,11 +9,45 @@ namespace Shared
     /// <summary>
     /// The template (component) for the course tree
     /// </summary>
-    public abstract class AbstractCourse 
+    public abstract class AbstractCourse : IEquatable<AbstractCourse>, IComparable<AbstractCourse>
     {
         protected String Id;
         protected String Name;
         protected bool status;
+
+        #region Interface Implementation
+
+        public bool Equals(AbstractCourse CourseIn)
+        {
+            return this.Name.Equals(CourseIn.Name);
+        }//end Equals(AbstractCourse)
+
+        public override bool Equals(object obj)
+        {
+            if(obj == null)
+            {
+                return base.Equals(obj);
+            }
+
+            if(!(obj is AbstractCourse))
+            {
+                throw new ArgumentException("Parameter is not a course of any kind, frig off barb");
+            }
+
+            return Equals(obj as AbstractCourse);
+        }//end Equals(obj)
+
+        public int CompareTo(AbstractCourse CourseIn)
+        {
+            return this.Name.CompareTo(CourseIn.Name); 
+        }//end CompareTo(AbstractCourse)
+
+        public override int GetHashCode()
+        {
+            return this.Name.GetHashCode();
+        }//end GetHashCode()
+
+        #endregion
 
         #region Constructors
 
